@@ -8,7 +8,7 @@ interface IProducts {
     id: string
     name: string
     image_url: string
-    price: number
+    price: string
   }[]
 }
 
@@ -37,7 +37,7 @@ export const Products = ({ products }: IProducts) => {
               <footer className="absolute bottom-1 left-1 right-1 flex items-center justify-between rounded-md bg-[rgba(0,0,0,0.6)] p-8">
                 <h1 className="text-lg">{product.name}</h1>
                 <span className="text-xl font-bold text-green-300">
-                  R$ {product.price}
+                  {product.price}
                 </span>
               </footer>
             </article>
