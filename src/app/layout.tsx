@@ -1,7 +1,10 @@
+import './globals.css'
+
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
-import './globals.css'
 import { ReactNode } from 'react'
+
+import { Header } from '@/components/header'
 
 const roboto = Roboto({ weight: ['400', '700'], subsets: ['latin'] })
 
@@ -17,10 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${roboto.className} h-screen bg-gray-900 text-gray-100`}
-      >
-        {children}
+      <body className={`${roboto.className} bg-gray-900 text-gray-100`}>
+        <>
+          <Header />
+          {children}
+        </>
       </body>
     </html>
   )
