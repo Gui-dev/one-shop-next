@@ -3,13 +3,16 @@ import { useKeenSlider } from 'keen-slider/react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-interface IProducts {
-  products: {
-    id: string
-    name: string
-    image_url: string
-    price: string
-  }[]
+export interface IProductParams {
+  id: string
+  name: string
+  image_url: string
+  default_price_id: string
+  price: string
+}
+
+export interface IProducts {
+  products: IProductParams[]
 }
 
 export const Products = ({ products }: IProducts) => {

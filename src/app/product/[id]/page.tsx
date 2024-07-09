@@ -1,25 +1,35 @@
 import Image from 'next/image'
 import Stripe from 'stripe'
 
+import { CheckoutComponent } from '@/components/checkout'
 import { stripe } from '@/lib/stripe'
 
-interface IProduct {
+interface IProductParams {
   params: {
     id: string
   }
 }
 
-export default async function Product({ params }: IProduct) {
+export interface IProduct {
+  id: string
+  name: string
+  description: string | null
+  image_url: string
+  default_price_id: string
+  price: string
+}
+
+export default async function Product({ params }: IProductParams) {
   const response = await stripe.products.retrieve(params.id, {
     expand: ['default_price'],
   })
   const default_price = response.default_price as Stripe.Price
-
   const product = {
     id: response.id,
     name: response.name,
     description: response.description,
     image_url: response.images[0],
+    default_price_id: default_price.id,
     price: new Intl.NumberFormat('pt-BR', {
       style: 'currency',
       currency: 'BRL',
@@ -49,9 +59,7 @@ export default async function Product({ params }: IProduct) {
           {product.description}
         </p>
 
-        <button className="mt-auto cursor-pointer rounded-md border-green-300 bg-green-500 p-5 font-bold text-gray-800 hover:border-green-300/90 hover:bg-green-500/95">
-          Comprar agora
-        </button>
+        <CheckoutComponent price_id={product.default_price_id} />
       </div>
     </article>
   )
