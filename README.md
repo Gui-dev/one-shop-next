@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  One shop Next
+</h1>
 
-## Getting Started
+## Uma loja virtual simples, onde pode escolher o item e pagar usando os serviços do stripe
 
-First, run the development server:
+**Tecnologias:**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [ReactJS](https://pt-br.reactjs.org)
+- [Typescript](https://www.typescriptlang.org)
+- [Tailwindcss](https://tailwindcss.com)-
+- [Stripe](https://stripe.com/br)
+
+**Demonstração:**
+
+<p align="center">
+  <img alt="One shop Sign in" src="./.screens/home.png" width="100%">
+  <img alt="One shop register" src="./.screens/product.png" width="100%">
+  <img alt="One shop home" src="./.screens/purchase.png" width="100%">
+  <img alt="One shop orders" src="./.screens/success.png" width="100%">
+</p>
+
+**Instalação e Execução:**
+
+1.  Clone o repositório:
+
+Bash
+
+```
+git clone https://github.com/Gui-dev/one-shop-next.git
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.  Clone o repositório:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Bash
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+pnpm install
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+3.  Execute a aplicação web:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Bash
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm run dev
+```
 
-## Deploy on Vercel
+```
+pnpm dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5.  Acesse a aplicação em http://localhost:3000 no seu navegador.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Contribuição:**
+
+Agradecemos a sua contribuição para este projeto! Você pode contribuir submetendo issues e pull requests no repositório GitHub.
+
+**Licença:**
+
+Este projeto está licenciado sob a licença MIT.
